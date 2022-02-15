@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/images/1.jpg</ImageUrl>
+    <Width>1000</Width>
+    <Height>500</Height>
+    
+  </Ad>
+  <Ad>
+    <ImageUrl>~/images/2.jpg</ImageUrl>
+    <Width>1000</Width>
+    <Height>500</Height>
+    
+    
+  </Ad>
+  <Ad>
+    
+    <ImageUrl>~/images/3.jpg</ImageUrl>
+    <Width>1000</Width>
+    <Height>500</Height>
+    
+  </Ad>
+  <Ad>
+
+    <ImageUrl>~/images/4.jpg</ImageUrl>
+    <Width>1000</Width>
+    <Height>500</Height>
+
+  </Ad>
+  <Ad>
+
+    <ImageUrl>~/images/5.jpg</ImageUrl>
+    <Width>1000</Width>
+    <Height>500</Height>
+
+  </Ad>
+  <Ad>
+
+    <ImageUrl>~/images/6.jpg</ImageUrl>
+    <Width>1000</Width>
+    <Height>500</Height>
+
+  </Ad>
+  <Ad>
+
+    <ImageUrl>~/images/7.jpg</ImageUrl>
+    <Width>1000</Width>
+    <Height>500</Height>
+
+  </Ad>
+  <Ad>
+
+    <ImageUrl>~/images/8.jpg</ImageUrl>
+    <Width>1000</Width>
+    <Height>500</Height>
+
+  </Ad>
+  <Ad>
+
+    <ImageUrl>~/images/9.jpg</ImageUrl>
+    <Width>1000</Width>
+    <Height>500</Height>
+
+  </Ad>
+  <Ad>
+
+    <ImageUrl>~/images/10.jpg</ImageUrl>
+    <Width>1000</Width>
+    <Height>500</Height>
+
+  </Ad>
+</Advertisements>

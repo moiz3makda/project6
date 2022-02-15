@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+  
+    
+</head>
+<body style="height: 394px" bgcolor="gray">
+<asp:ContentPlaceHolder ID ="anim" runat ="server">
+
+</asp:ContentPlaceHolder>
+<asp:ContentPlaceHolder ID="banner" runat ="server">
+<center></center>
+</asp:ContentPlaceHolder>
+
+    <form id="form1" runat="server">
+    <div align="center">
+     <asp:ContentPlaceHolder id="menu" runat="server">
+     <asp:Image ID ="ban" runat ="server" ImageUrl="~/myjoboption_logo.png" align="left" 
+             Height="59px" />
+    <div style="margin-right: 69px">
+    <asp:Menu ID="Menu1" runat="server" BackColor="#FFFFCC" BorderColor="Black"
+            DynamicHorizontalOffset="2" DynamicVerticalOffset="10" Font-Names="Verdana" 
+            Font-Size="X-Large" ForeColor="Black" 
+            Orientation="Horizontal" StaticSubMenuIndent="10px" BorderWidth="15px" 
+            Font-Bold="True" Font-Underline="True" RenderingMode="Table" Width="787px" 
+            style="margin-left: 0px">
+            <DynamicHoverStyle BackColor="Black"
+             BorderStyle="Double" BorderColor="Black" ForeColor="#CC00FF" 
+                Height="100px" Width="100px" Font-Size="XX-Large" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <DynamicMenuStyle BackColor="Gray" />
+            <DynamicSelectedStyle BackColor="Gray" />
+            <Items>
+                <asp:MenuItem Text="Home" Value ="Home" NavigateUrl ="~/Home.aspx"></asp:MenuItem>
+                <asp:MenuItem Text=" User_Login" Value=" User_Login" NavigateUrl ="~/User_Login.aspx" ></asp:MenuItem>
+                <asp:MenuItem Text=" Company_Login" Value="company_Login" NavigateUrl="~/Company_Login.aspx"> </asp:MenuItem>
+                <asp:MenuItem Text="About us" Value="About us" NavigateUrl ="~/about_us.aspx"></asp:MenuItem>
+                <asp:MenuItem Text=" Login" Value=" Login" NavigateUrl="~/Admin_Login.aspx"></asp:MenuItem>
+            </Items>
+            <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <StaticSelectedStyle BackColor="#5D7B9D" />
+        </asp:Menu>
+
+               
+        <br />
+        </div>
+
+               
+        </asp:ContentPlaceHolder>
+        
+        <br />
+        </div>
+    <asp:ContentPlaceHolder ID ="slider" runat ="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <asp:Timer ID="Timer1" runat="server" Interval="2000">
+    </asp:Timer>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <ContentTemplate>
+    <center>
+        <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/Ads.xml" 
+            AlternateTextField=" " NavigateUrlField=" " /></center>
+        <br /></center>
+        
+    </ContentTemplate>
+    <Triggers >
+    <asp:AsyncPostBackTrigger ControlID ="Timer1" EventName="Tick"/>
+    </Triggers>
+    </asp:UpdatePanel>
+    
+
+    </asp:ContentPlaceHolder>
+    <br /><br /><br />
+    <asp:ContentPlaceHolder ID ="footer" runat ="server" >
+    <center>
+        <asp:Panel ID="Panel1" runat="server" BackColor="Black" ForeColor="White" 
+            Width="1000px" Height="154px" >
+        <table border ="5px" align="right">
+           <tr><td><asp:Label ID ="lbl1" runat ="server" Text ="Enter your name:"></asp:Label></td>
+           <td><asp:TextBox ID ="name" runat ="server" ></asp:TextBox><br /></td></tr>
+           <tr><td><asp:Label ID ="lbl2" runat ="server" Text ="Enter your feedback:"></asp:Label></td>
+           <td><asp:TextBox ID ="feedback" runat ="server" TextMode ="MultiLine"  ></asp:TextBox><br /></td></tr>
+           <tr><td colspan ="2" align="center"><asp:Button ID ="submit" runat ="server" 
+                   Text ="submit" onclick="submit_Click" /></td></tr>
+           </table>
+           <align="right">
+           This site is developed by:<br/>Makda Moiz
+           <br />we want your feedback for put other functionalities
+           </align>
+        </asp:Panel>
+    </center>
+        
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
