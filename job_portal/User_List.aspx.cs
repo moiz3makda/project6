@@ -8,11 +8,15 @@ using System.Data.SqlClient;
 using System.Data;
 public partial class User_List : System.Web.UI.Page
 {
+
+    public SqlConnection con;
+    public SqlCommand cmd;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\job_portal.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=F:\Amta\job_portal\job_portal.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select id , name , address , state , city , mobile_no , gender , email_id , date_of_birth , education_status , key_skills from user_reg", con);
             DataTable dt = new DataTable();
@@ -39,8 +43,24 @@ public partial class User_List : System.Web.UI.Page
         }
     protected void gd1_SelectedIndexChanged(object sender, EventArgs e)
     {
-        Response.AddHeader("content-diposition", "attachment;filename=\"" + UniqueFilePathSuffix + "\"");
-        Response.TransmitFile(Server.MapPath(UniqueFilePathSuffix));
-        Response.End();
+        //Response.AddHeader("content-diposition", "attachment;filename=\"" + UniqueFilePathSuffix + "\"");
+        //Response.TransmitFile(Server.MapPath(UniqueFilePathSuffix));
+        //Response.End();
+        con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=F:\Amta\job_portal\job_portal.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+        con.Open();
+        cmd = new SqlCommand("select filename,filetype,filedata from user_reg where id=@id", con);
+        cmd.Parameters.AddWithValue("id", gd1.SelectedRow.Cells[1].Text);
+        SqlDataReader dr = cmd.ExecuteReader();
+        if (dr.Read())
+        {
+            Response.Clear();
+            Response.Buffer = true;
+            Response.ContentType = dr["filetype"].ToString();
+            Response.AddHeader("content-disposition", "attachment;filename=" + dr["filename"].ToString());
+            Response.Charset = "";
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.BinaryWrite((byte[])dr["filedata"]);
+            Response.End();
+        }
     }
 }

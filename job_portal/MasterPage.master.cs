@@ -13,7 +13,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     
     protected void submit_Click(object sender, EventArgs e)
     {
-        string str = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\job_portal.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+        string str = @"Data Source=.\SQLEXPRESS;AttachDbFilename=F:\Amta\job_portal\job_portal.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
         SqlConnection con = new SqlConnection(str);
         con.Open();
         string qry = "insert into feedback values('" + name.Text + "','" + feedback.Text + "')";

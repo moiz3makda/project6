@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/MasterPage.master" CodeFile="user_register_submit.aspx.cs" Inherits="user_register_submit" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/loggedin.master" CodeFile="user_register_submit.aspx.cs" Inherits="user_register_submit" %>
 
 <asp:Content ContentPlaceHolderID ="slider" runat ="server" >
     <table align="center" border ="10px" width ="1000px" height="500px">

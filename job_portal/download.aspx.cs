@@ -16,7 +16,7 @@ public partial class download : System.Web.UI.Page
     protected void dld_Click(object sender, EventArgs e)
 
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\ProgramFiles\MicrosoftSQLServer\MSSQL11.MSSQLSERVER\MSSQL\DATA\job_portal.mdf;IntegratedSecurity=True;ConnectTimeout=30;UserInstance=True");
+        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=F:\Amta\job_portal\job_portal.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
         con.Open();
         int id = int.Parse(Request.QueryString["id"].ToString());
         string qry = "select resume from user_reg where id=" + id;

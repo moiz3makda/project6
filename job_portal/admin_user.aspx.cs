@@ -9,6 +9,6 @@ public partial class admin_user : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        SqlDataSource1.DataBind();
+
     }
 }

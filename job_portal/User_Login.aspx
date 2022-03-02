@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#"  MasterPageFile ="~/MasterPage.master" AutoEventWireup="true" CodeFile="User_Login.aspx.cs" Inherits="User_Login" %>
+﻿<%@ Page Language="C#"  MasterPageFile ="~/loggedin.master" AutoEventWireup="true" CodeFile="User_Login.aspx.cs" Inherits="User_Login" %>
 
 <asp:Content ID ="content" ContentPlaceHolderID ="slider" runat ="server" >
 <table border ="15" align="center" style ="height:500px;width:1000px;" >

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile ="~/MasterPage.master" AutoEventWireup="true" CodeFile="admin_link.aspx.cs" Inherits="admin_link" %>
+﻿<%@ Page Language="C#" MasterPageFile ="~/loggedin.master" AutoEventWireup="true" CodeFile="admin_link.aspx.cs" Inherits="admin_link" %>
 <asp:Content ID="content" ContentPlaceHolderID ="slider" runat ="server" >
 <center>
     <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/admin_user.aspx"><h3>User</h3></asp:LinkButton>

@@ -16,7 +16,7 @@ public partial class Company_Login : System.Web.UI.Page
     }
     protected void login_Click(object sender, EventArgs e)
     {
-        string str = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\job_portal.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+        string str = @"Data Source=.\SQLEXPRESS;AttachDbFilename=F:\Amta\job_portal\job_portal.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
         SqlConnection con = new SqlConnection(str);
         con.Open();
         SqlCommand cmd = new SqlCommand("select *from company_register where unm=@unm and pwd=@pwd", con);
