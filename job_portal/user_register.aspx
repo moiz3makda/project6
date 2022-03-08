@@ -58,7 +58,7 @@
                                                 <tr><td> 
                                                     <asp:Label ID="Label7" runat="server" Text="Date of Birth:"></asp:Label></td>
                                                     <td>
-                                                        <asp:TextBox ID="udt" runat="server"></asp:TextBox> 
+                                                        <asp:TextBox ID="udt" runat="server" TextMode="Date"></asp:TextBox> 
                                                     </td></tr>
                                                        <tr><td> 
                                                             <asp:Label ID="Label8" runat="server" Text="upload Resume:"></asp:Label></td>

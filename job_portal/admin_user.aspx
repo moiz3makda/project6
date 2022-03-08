@@ -21,8 +21,7 @@
                 SortExpression="email_id" />
             <asp:BoundField DataField="date_of_birth" HeaderText="date_of_birth" 
                 SortExpression="date_of_birth" />
-            <asp:BoundField DataField="resume" HeaderText="resume" 
-                SortExpression="resume" />
+            
                
             <asp:BoundField DataField="education_status" HeaderText="education_status" 
                 SortExpression="education_status" />
